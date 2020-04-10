@@ -19,6 +19,7 @@ namespace JogoDoGalo
 
         public static void IniciarJogo()
         {
+            var count = 0;
             var end = true;
             string pos1 = "1";
             string pos2 = "2";
@@ -35,8 +36,8 @@ namespace JogoDoGalo
             while (end)
             {
                 Console.WriteLine("Jogador1 (X) escolha um numero entre 1 e 9?");
-                var jog1 = Console.ReadLine();
-                switch (jog1)
+                var game1 = Console.ReadLine();
+                switch (game1)
                 {
                     case "1":
                         pos1 = "X";
@@ -78,12 +79,12 @@ namespace JogoDoGalo
                 resposta = GameOver(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9);
                 if (resposta)
                 {
-                    Console.WriteLine("Jogador1 ganhou");
+                    Console.WriteLine("Jogador1 ganhou \\O/");
                     break;
                 }
                 Console.WriteLine("Jogador2 (O) escolha um numero entre 1 e 9?");
-                var jog2 = Console.ReadLine();
-                switch (jog2)
+                var game2 = Console.ReadLine();
+                switch (game2)
                 {
                     case "1":
                         pos1 = "O";
@@ -125,10 +126,18 @@ namespace JogoDoGalo
                 resposta = GameOver(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9);
                 if (resposta)
                 {
-                    Console.WriteLine("Jogador2 ganhou");
+                    Console.WriteLine("Jogador2 ganhou \\O/");
                     break;
                 }
-            }       
+                count += 2;
+                if (count == 8)
+                    break;
+            }
+
+            if (!resposta)
+            {
+                Console.WriteLine("O jogo deu empate ;( ");
+            }
         }
         public static bool GameOver(string pos1, string pos2, string pos3, string pos4, string pos5,
             string pos6, string pos7, string pos8, string pos9)
@@ -136,22 +145,24 @@ namespace JogoDoGalo
             if (pos1 == pos2 && pos1 == pos3)
                 return true;
 
-            if (pos1 == pos4 && pos1 == pos7)
+            else if (pos1 == pos4 && pos1 == pos7)
                 return true;
 
-            if (pos1 == pos5 && pos1 == pos9)
+            else if (pos1 == pos5 && pos1 == pos9)
                 return true;
 
-            if (pos2 == pos5 && pos2 == pos8)
+            else if (pos2 == pos5 && pos2 == pos8)
                 return true;
 
-            if (pos3 == pos6 && pos3 == pos9)
+            else if (pos3 == pos6 && pos3 == pos9)
                 return true;
 
-            if (pos4 == pos5 && pos4 == pos6)
+            else if (pos4 == pos5 && pos4 == pos6)
                 return true;
 
-            if (pos7 == pos8 && pos7 == pos9)
+            else if (pos7 == pos8 && pos7 == pos9)
+                return true;
+            else if (pos7 == pos5 && pos7 == pos3)
                 return true;
             return false;
         }
