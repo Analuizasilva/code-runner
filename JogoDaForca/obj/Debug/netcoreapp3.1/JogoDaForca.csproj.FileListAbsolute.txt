@@ -5,3 +5,4 @@ C:\Team\CodeRunner\JogoDaForca\obj\Debug\netcoreapp3.1\JogoDaForca.AssemblyInfoI
 C:\Team\CodeRunner\JogoDaForca\obj\Debug\netcoreapp3.1\JogoDaForca.AssemblyInfo.cs
 C:\Team\CodeRunner\JogoDaForca\obj\Debug\netcoreapp3.1\JogoDaForca.dll
 C:\Team\CodeRunner\JogoDaForca\obj\Debug\netcoreapp3.1\JogoDaForca.pdb
+C:\Team\CodeRunner\JogoDaForca\obj\Debug\netcoreapp3.1\JogoDaForca.csprojAssemblyReference.cache

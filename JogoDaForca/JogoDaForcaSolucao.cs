@@ -2,9 +2,9 @@
 
 namespace JogoDaForca
 {
-    public class Class2
+    public class JogoDaForcaSolucao
     {
-    public static void JogoDaVelha()
+    public static void JogoDaForca()
     {
         Console.WriteLine("  ________     ");
         Console.WriteLine(" |        |         ");
