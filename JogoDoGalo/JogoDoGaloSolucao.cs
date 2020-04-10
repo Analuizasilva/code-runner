@@ -8,7 +8,7 @@ namespace JogoDoGalo
         {
             IniciarJogo();
         }
-        public static void ImprimirPosicao(string pos1, string pos2, string pos3, string pos4, string pos5,
+        public static void PrintPosition(string pos1, string pos2, string pos3, string pos4, string pos5,
             string pos6, string pos7, string pos8, string pos9)
         {
             Console.Clear();
@@ -32,11 +32,23 @@ namespace JogoDoGalo
             string pos9 = "9";
             var resposta = false;
 
-            ImprimirPosicao(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9);
+            PrintPosition(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9);
             while (end)
             {
+                bool choice = true;
                 Console.WriteLine("Jogador1 (X) escolha um numero entre 1 e 9?");
                 var game1 = Console.ReadLine();
+
+                while (choice)
+                {
+                    if (occupied(game1, pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9))
+                    {
+                        Console.WriteLine("Por favor escolha um numero entre 1 e 9, diferente do escolhido");
+                        game1 = Console.ReadLine();
+                    }
+                    else break;
+                }
+
                 switch (game1)
                 {
                     case "1":
@@ -75,7 +87,7 @@ namespace JogoDoGalo
                         pos9 = "X";
                         break;
                 }
-                ImprimirPosicao(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9);
+                PrintPosition(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9);
                 resposta = GameOver(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9);
                 if (resposta)
                 {
@@ -83,8 +95,19 @@ namespace JogoDoGalo
                     break;
                 }
                 Console.WriteLine("Jogador2 (O) escolha um numero entre 1 e 9?");
-                var game2 = Console.ReadLine();
-                switch (game2)
+                var player2 = Console.ReadLine();
+
+                while (choice)
+                {
+                    if (occupied(player2, pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9))
+                    {
+                        Console.WriteLine("Por favor escolha um numero entre 1 e 9, diferente do escolhido");
+                        player2 = Console.ReadLine();
+                    }
+                    else break;
+                }
+
+                switch (player2)
                 {
                     case "1":
                         pos1 = "O";
@@ -122,7 +145,7 @@ namespace JogoDoGalo
                         pos9 = "O";
                         break;
                 }
-                ImprimirPosicao(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9);
+                PrintPosition(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9);
                 resposta = GameOver(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9);
                 if (resposta)
                 {
@@ -133,12 +156,12 @@ namespace JogoDoGalo
                 if (count == 8)
                     break;
             }
-
             if (!resposta)
             {
                 Console.WriteLine("O jogo deu empate ;( ");
             }
         }
+
         public static bool GameOver(string pos1, string pos2, string pos3, string pos4, string pos5,
             string pos6, string pos7, string pos8, string pos9)
         {
@@ -165,6 +188,41 @@ namespace JogoDoGalo
             else if (pos7 == pos5 && pos7 == pos3)
                 return true;
             return false;
+        }
+
+        public static bool occupied(string pos, string pos1, string pos2, string pos3, string pos4, string pos5,
+             string pos6, string pos7, string pos8, string pos9)
+        {
+            switch (pos)
+            {
+                case "1":
+                    return pos1 == "X" || pos1 == "O";
+
+                case "2":
+                    return pos2 == "X" || pos2 == "O";
+
+                case "3":
+                    return pos3 == "X" || pos3 == "O";
+
+                case "4":
+                    return pos4 == "X" || pos4 == "O";
+
+                case "5":
+                    return pos5 == "X" || pos5 == "O";
+
+                case "6":
+                    return pos6 == "X" || pos6 == "O";
+
+                case "7":
+                    return pos7 == "X" || pos7 == "O";
+
+                case "8":
+                    return pos8 == "X" || pos8 == "O";
+
+                case "9":
+                    return pos9 == "X" || pos9 == "O";
+            }
+            return true;
         }
     }
 }
