@@ -6,7 +6,7 @@ namespace JogoDoGalo
     {
         public static void JogoDoGalo()
         {
-            IniciarJogo();
+            StartGame();
         }
         public static void PrintPosition(string pos1, string pos2, string pos3, string pos4, string pos5,
             string pos6, string pos7, string pos8, string pos9)
@@ -17,7 +17,7 @@ namespace JogoDoGalo
             Console.WriteLine($" {pos7} | {pos8} | {pos9} ");
         }
 
-        public static void IniciarJogo()
+        public static void StartGame()
         {
             var count = 0;
             var end = true;
@@ -37,19 +37,19 @@ namespace JogoDoGalo
             {
                 bool choice = true;
                 Console.WriteLine("Jogador1 (X) escolha um numero entre 1 e 9?");
-                var game1 = Console.ReadLine();
+                var player1 = Console.ReadLine();
 
                 while (choice)
                 {
-                    if (occupied(game1, pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9))
+                    if (occupied(player1, pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9))
                     {
                         Console.WriteLine("Por favor escolha um numero entre 1 e 9, diferente do escolhido");
-                        game1 = Console.ReadLine();
+                        player1 = Console.ReadLine();
                     }
                     else break;
                 }
 
-                switch (game1)
+                switch (player1)
                 {
                     case "1":
                         pos1 = "X";

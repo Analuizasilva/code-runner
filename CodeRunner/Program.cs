@@ -9,9 +9,9 @@ namespace CodeRunner
     {
         static void Main(string[] args) 
         {
-            //CalculadoraSolucao.Calculadora();
+            CalculadoraSolucao.Calculator();
             //JogoDaForcaSolucao.JogoDaForca();
-            JogoDoGaloSolucao.JogoDoGalo();
+            //JogoDoGaloSolucao.JogoDoGalo();
         }
     }
 }
