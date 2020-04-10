@@ -1,0 +1,8 @@
+C:\Team\CodeRunner\Calculadora\obj\Debug\netcoreapp3.1\Calculadora.AssemblyInfoInputs.cache
+C:\Team\CodeRunner\Calculadora\obj\Debug\netcoreapp3.1\Calculadora.AssemblyInfo.cs
+C:\Team\CodeRunner\Calculadora\bin\Debug\netcoreapp3.1\Calculadora.deps.json
+C:\Team\CodeRunner\Calculadora\bin\Debug\netcoreapp3.1\Calculadora.dll
+C:\Team\CodeRunner\Calculadora\bin\Debug\netcoreapp3.1\Calculadora.pdb
+C:\Team\CodeRunner\Calculadora\obj\Debug\netcoreapp3.1\Calculadora.dll
+C:\Team\CodeRunner\Calculadora\obj\Debug\netcoreapp3.1\Calculadora.pdb
+C:\Team\CodeRunner\Calculadora\obj\Debug\netcoreapp3.1\Calculadora.csprojAssemblyReference.cache
