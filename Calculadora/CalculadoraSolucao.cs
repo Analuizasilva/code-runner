@@ -5,11 +5,11 @@ namespace Calculadora
     public class CalculadoraSolucao
     {
         #region Designer Calculadora
-        public static void PrintCalculator(string valorscreen)
+        public static void PrintCalculator(string valueScreen)
         {      
-            // for imprime numeros na screen    
-            string espacos = "";
-            for (int i = 0; i < (25 - valorscreen.Length); i++) espacos += " ";
+            // for imprime numeros na tela    
+            string spaces = "";
+            for (int i = 0; i < (25 - valueScreen.Length); i++) spaces += " ";
             Console.Clear();
             Console.BackgroundColor = ConsoleColor.Gray;
             Console.ForegroundColor = ConsoleColor.Black;
@@ -17,7 +17,7 @@ namespace Calculadora
             Console.BackgroundColor = ConsoleColor.Gray;
             Console.Write(" ");
             Console.BackgroundColor = ConsoleColor.DarkGray;
-            Console.Write($"{espacos}{valorscreen}");
+            Console.Write($"{spaces}{valueScreen}");
             Console.BackgroundColor = ConsoleColor.Gray;
             Console.WriteLine(" ");
             Console.BackgroundColor = ConsoleColor.Gray;
@@ -28,7 +28,7 @@ namespace Calculadora
             // for imprime teclas "7, 8, 9" 
             for (int i = 7; i <= 9; i++)
             {
-                ImprimeNumeros(i);
+                PrintNumbers(i);
             }
             // imprime tecla  "+"
             Console.BackgroundColor = ConsoleColor.White;
@@ -43,7 +43,7 @@ namespace Calculadora
             // imprime teclas "4, 5, 6" 
             for (int i = 4; i <= 6; i++)
             {
-                ImprimeNumeros(i);
+                PrintNumbers(i);
             }
 
             // imprime tecla  "-"
@@ -58,7 +58,7 @@ namespace Calculadora
             // imprime teclas  "1, 2, 3" 
             for (int i = 1; i <= 3; i++)
             {
-                ImprimeNumeros(i);
+                PrintNumbers(i);
             }
 
             // imprime tecla  "*"
@@ -110,16 +110,16 @@ namespace Calculadora
         #endregion
 
         #region Imprimir
-        // funcao que imprime na screen da calculadora.
-        private static void ImprimeNumeros(int numero)
+        // funcao que imprime na tela da calculadora.
+        private static void PrintNumbers(int number)
         {
             Console.BackgroundColor = ConsoleColor.White;
-            Console.Write($" {numero} ");
+            Console.Write($" {number} ");
             Console.BackgroundColor = ConsoleColor.Gray;
             Console.Write("   ");
         }
         
-        public static void Calculator()
+        public static void Calculadora()
         {
             PrintCalculator("0");
             Calculate();
@@ -133,7 +133,7 @@ namespace Calculadora
             {
                 // Solicita numeros e operadores
                 var screen = "";
-                Console.WriteLine("Insira um numero");
+                Console.WriteLine("Insira um número!");
                 var input = Console.ReadLine();
                 if (input == "x")
                 {
@@ -153,7 +153,7 @@ namespace Calculadora
                 {
                     if (oper == "+")
                     {
-                        Console.WriteLine("Insira um numero");
+                        Console.WriteLine("Insira um número!");
                         var num1 = double.Parse(Console.ReadLine());
                         screen += $" {num1}";
                         PrintCalculator(screen);
@@ -165,7 +165,7 @@ namespace Calculadora
                     }
                     else if (oper == "-")
                     {
-                        Console.WriteLine("Insira um numero");
+                        Console.WriteLine("Insira um número!");
                         var num1 = double.Parse(Console.ReadLine());
                         screen += $" {num1}";
                         PrintCalculator(screen);
@@ -176,7 +176,7 @@ namespace Calculadora
                     }
                     else if (oper == "*")
                     {
-                        Console.WriteLine("Insira um numero");
+                        Console.WriteLine("Insira um número!");
                         var num1 = double.Parse(Console.ReadLine());
                         screen += $" {num1}";
                         PrintCalculator(screen);
@@ -187,7 +187,7 @@ namespace Calculadora
                     }
                     else if (oper == "/")
                     {
-                        Console.WriteLine("Insira um numero");
+                        Console.WriteLine("Insira um número!");
                         var num1 = double.Parse(Console.ReadLine());
                         screen += $" {num1}";
                         PrintCalculator(screen);
@@ -199,7 +199,7 @@ namespace Calculadora
                     }
                     else if (oper == "%")
                     {
-                        Console.WriteLine("Insira um numero");
+                        Console.WriteLine("Insira um número!");
                         var num1 = double.Parse(Console.ReadLine());
                         screen += $" {num1}";
                         PrintCalculator(screen);
@@ -212,14 +212,14 @@ namespace Calculadora
                 }
                 #endregion
 
-        #region Logica para caso um numero seja dividido por zero
+                #region Logica para caso um numero seja dividido por zero
                 screen = $" {result} ";
                 if (screen == " ∞ ") screen = "Infinito";
                 PrintCalculator(screen);
             }
             #endregion
 
-        #region catch da excessao caso seja digitado uma letra 
+        #region catch da excessao caso seja inserido uma letra 
             catch
             {
                 Console.WriteLine(" Não foi possivel efetuar a operação com letras!");

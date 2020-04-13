@@ -30,7 +30,7 @@ namespace JogoDoGalo
             string pos7 = "7";
             string pos8 = "8";
             string pos9 = "9";
-            var resposta = false;
+            var answer = false;
 
             PrintPosition(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9);
             while (end)
@@ -88,8 +88,8 @@ namespace JogoDoGalo
                         break;
                 }
                 PrintPosition(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9);
-                resposta = GameOver(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9);
-                if (resposta)
+                answer = GameOver(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9);
+                if (answer)
                 {
                     Console.WriteLine("Jogador1 ganhou \\O/");
                     break;
@@ -146,8 +146,8 @@ namespace JogoDoGalo
                         break;
                 }
                 PrintPosition(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9);
-                resposta = GameOver(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9);
-                if (resposta)
+                answer = GameOver(pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9);
+                if (answer)
                 {
                     Console.WriteLine("Jogador2 ganhou \\O/");
                     break;
@@ -156,7 +156,7 @@ namespace JogoDoGalo
                 if (count == 8)
                     break;
             }
-            if (!resposta)
+            if (!answer)
             {
                 Console.WriteLine("O jogo deu empate ;( ");
             }

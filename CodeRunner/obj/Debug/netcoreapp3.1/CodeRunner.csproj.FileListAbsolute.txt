@@ -16,3 +16,5 @@ C:\Team\CodeRunner\CodeRunner\bin\Debug\netcoreapp3.1\JogoDaForca.dll
 C:\Team\CodeRunner\CodeRunner\bin\Debug\netcoreapp3.1\JogoDoGalo.dll
 C:\Team\CodeRunner\CodeRunner\bin\Debug\netcoreapp3.1\JogoDaForca.pdb
 C:\Team\CodeRunner\CodeRunner\bin\Debug\netcoreapp3.1\JogoDoGalo.pdb
+C:\Team\CodeRunner\CodeRunner\bin\Debug\netcoreapp3.1\PedraPapelTesoura.dll
+C:\Team\CodeRunner\CodeRunner\bin\Debug\netcoreapp3.1\PedraPapelTesoura.pdb

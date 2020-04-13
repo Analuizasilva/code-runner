@@ -1,7 +1,8 @@
 ﻿using System;
 using Calculadora;
-using JogoDaForca;
+using Ficha13;
 using JogoDoGalo;
+using PedraPapelTesoura;
 
 namespace CodeRunner
 {
@@ -9,9 +10,10 @@ namespace CodeRunner
     {
         static void Main(string[] args) 
         {
-            CalculadoraSolucao.Calculator();
-            //JogoDaForcaSolucao.JogoDaForca();
+            //CalculadoraSolucao.Calculadora();
+             JogoDaForca.Inicio();
             //JogoDoGaloSolucao.JogoDoGalo();
+            //PedraPapelTesouraSolucao.Start();
         }
     }
 }
